@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/mobile.js" ></script>
+		<style>
+		
+			/*默认样式*/
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.clear:after {content:".";display:block;clear:both;width:0;height:0;overflow:hidden;visibility:hidden;}
+			.clear {zoom:1;}
+			
+			.fl {
+				float: left;
+			}
+			.fr {
+				float: right;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			html,body {
+				width: 100%;
+				height: 100%;
+				font-family: "微软雅黑";
+			}
+			
+			/*头部样式*/
+			header.order-header {
+				width: 100%;
+				height: 1.82rem;
+				text-align: center;
+				line-height: 1.82rem;
+				font-size: .68rem;
+				position: relative;
+				border-bottom: 2px solid #07ca61;
+			}
+			
+			header.order-header a {
+				width: 1.24rem;
+				text-align: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			/*主体样式*/
+			main.order-main {
+				width: 100%;
+			}
+				/*主体上部分样式*/
+			.order-main-top {
+				width: 100%;
+				height: 3rem;
+				
+			}
+			
+			.order-main-top img {
+				padding-top: .4rem;
+				margin-left: .4rem;
+			}
+			
+			.order-main-top .driver {
+				padding-left: .44rem;
+			}
+			
+			.order-main-top .driver h4 {
+				padding-top: .4rem;
+				font-size: .56rem;
+			}
+			
+			.order-main-top .driver h4 span {
+				display: inline-block;
+				width: .16rem;
+				height: .16rem;
+				border-radius: 50%;
+				background: black;
+				
+			}
+			
+			.order-main-top .driver p {
+				font-size: .44rem;
+				color: #b4b4b4;
+				line-height: 1.24rem;
+			}
+			
+			.order-main-top .driver ul {
+				
+			}
+			
+			.order-main-top .driver li {
+				float: left;
+				width: .4rem;
+				height: .4rem;
+				background: url(img/star.png)no-repeat ;
+			}
+			
+			.order-main-top .driver li:last-child {
+				float: left;
+				width: .4rem;
+				height: .4rem;
+				background: url(img/star2.png)no-repeat ;
+			}
+			
+			.order-main-top .phone {
+				margin-top: .84rem;
+				width: 1.56rem;
+				height: 1.56rem;
+				border: 1px solid #07ca61;
+				border-radius: 50%;
+				background: url(img/tel.png) no-repeat center center;
+				margin-right: .8rem;
+				
+			}
+			/*主体中间灰色样式*/
+			.order-main-center {
+				width: 100%;
+				height: .4rem;
+				background: #ebebeb;
+			}
+			
+				/*主体下部分样式*/
+			.order-main-bottom {
+				width: 100%;
+				font-size: .6rem;
+			}
+			
+			.order-main-bottom ul {
+				padding: 0 .4rem;
+			}
+			
+			.order-main-bottom .distribution {
+				height: 1.36rem;
+				border-bottom: 1px solid #dadada;
+				line-height: 1.36rem;
+				color: #969696;
+			}
+			
+			.order-main-bottom .distribution .lst {
+				color: #07CA61;
+				float: right;
+			}
+			
+			.order-main-bottom .models {
+				width: 100%;
+				height: 1.74rem;
+				border-bottom: 1px solid #dadada;
+				line-height: 1.74rem;
+				color: #969696;
+			}
+			
+			.order-main-bottom .models span:last-child {
+				float: right;
+				color: black;
+			}
+			
+			.order-main-bottom .delivery {
+				width: 100%;
+				height: 2.56rem;
+				border-bottom: 1px solid #DADADA;
+				color: #969696;
+				padding-top: .6rem;
+			}
+			
+			.order-main-bottom .delivery .span-black{
+				color: #000;
+				float: right;
+			}
+			
+			.order-main-bottom .delivery div {
+				width: 100%;
+			}
+			
+			.order-main-bottom .delivery p{
+				float: right;
+			}
+			
+			.order-main-bottom .set-out {
+				width: 100%;
+				height: 1.72rem;
+				line-height: 1.72rem;
+				border-bottom: 1px solid #DADADA;
+			}
+			
+			.order-main-bottom .set-out .lat {
+				float: left;
+				color: #969696;
+			}
+			
+			.order-main-bottom .accessorial-service {
+				width: 100%;
+				height: 1.72rem;
+				line-height: 1.72rem;
+				border-bottom: 1px solid #DADADA;
+			}
+			
+			.order-main-bottom .accessorial-service span:first-child {
+				color: #969696;
+			}
+			
+			.order-main-bottom .remarks {
+				width: 100%;
+				height: 1.72rem;
+				line-height: 1.72rem;
+				border-bottom: 1px solid #DADADA;
+			}
+			
+			.order-main-bottom .remarks span:first-child {
+				color: #969696;
+			}
+			
+				/*费用部分*/
+			.order-main-bottom .price {
+				
+			}
+			
+			.order-main-bottom .price div {
+				height: 1.16rem;
+				line-height: 1.16rem;
+			}
+			
+			.order-main-bottom .price div span:first-child {
+				color: #969696;
+			}
+			
+			.order-main-bottom .price div span:last-child {
+				float: right;
+			}
+			
+			.order-main-bottom .price div .color-red {
+				color: red;
+			}
+			
+			.order-main-bottom button {
+				border: 0;
+				width: 100%;
+				height: 1.9rem;
+				font-size: .56rem;
+				color: #FFFFFF;
+				background: #07CA61;
+				border-radius: .1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<header class="order-header">
+			<a href="javascript:;"><img src="img/returnKey.png"/></a>
+			<p>订单详情</p>
+		</header>
+		<!--主体-->
+		<main class="order-main">
+			<!--主体上部分-->
+			<div class="order-main-top">
+				<img class="fl" src="img/headSculpture.png" />
+				<div class="driver clear fl">
+					<h4>张师傅<span></span>粤B2360W</h4>
+					<p>面包车</p>
+					<ul class="clear">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="phone fr">
+					
+				</div>
+			</div>
+			
+			<!--主体中间部分-->
+			<div class="order-main-center">
+				
+			</div>
+			
+			<!--主体下部分-->
+			<div class="order-main-bottom">
+				<ul>
+					<li class="distribution">
+						<img src="img/timepiece.png"/>
+						<span>2016-10-24</span>
+						<span>18:00</span>
+						<span class="lst">司机已分配</span>
+					</li>
+					<li class="models">
+						<span>车型</span>
+						<span>面包车</span>
+					</li>
+					<li class="delivery ">
+						<div class="clear">
+							<span class="fl">发货地</span>
+							<span class="span-black">中洲控股中心A座西门</span>
+						</div>
+						<p>15913139061</p>
+					</li>
+					<li class="delivery ">
+						<div class="clear">
+							<span class="fl">收货地</span>
+							<span class="span-black">深圳北什么什么机场</span>
+						</div>
+						<p>15913139061</p>
+					</li>
+					<li class="set-out clear">
+						<span class="lat">出发时间</span>
+						<div class="time fr">
+							<span>2016-10-25</span>
+							<span>18:00</span>
+						</div>
+						
+					</li>
+					<li class="accessorial-service clear">
+						<span class="fl">附加服务</span>
+						<span class="fr">搬运，返程</span>
+					</li>
+					<li class="remarks clear">
+						<span class="fl">备注</span>
+						<span class="fr">请直接到收货点来收货，谢谢</span>
+					</li>
+					<li class="price">
+						<div>
+							<span>起步价</span>
+							<span>33元</span>
+						</div>
+						<div>
+							<span>里程费(3.2公里)</span>
+							<span>64元</span>
+						</div>
+						<div>
+							<span>返程费用(5公里免费)</span>
+							<span>0元</span>
+						</div>
+						<div>
+							<span>优惠券已抵扣<i class="color-red">¥10元</i></span>
+							<span>切换优惠券 ></span>
+						</div>
+						<div>
+							<span>合计</span>
+							<span class="color-red">¥58</span>
+						</div>
+					</li>
+					
+					<button>取消订单</button>
+				</ul>	
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/mobile.js"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,body {
+				width: 100%;
+				height: 100%;
+			}
+			
+			body {
+				font-family: "微软雅黑";
+			}
+			
+			/*头部样式*/
+			header.cancel-service-header {
+				width: 100%;
+				height: 1.84rem;
+				font-size: .7rem;
+				line-height: 1.84rem;
+				text-align: center;
+				position: relative;
+				border-bottom: 1px solid #07CA61;
+			}
+			
+			.cancel-service-header a {
+				width: 1.24rem;
+				position: absolute;
+				top: 0;
+				left: 0;
+				
+			}
+			
+			/*主体样式*/
+			.cancel-service-main {
+				width: 100%;
+				height: 100%;
+			
+			}
+			
+			.cancel-service-main .padd {
+				margin: 0 .4rem;
+			}
+			
+			.cancel-service-main .prompt {
+				width: 100%;
+				height: 2rem;
+				background: #f88266;
+				font-size: .48rem;
+				color: #FFFFFF;
+				text-align: center;
+				padding-top: .5rem;
+				
+			}
+			
+			.cancel-service-main .prompt p {
+				padding: 0 .4rem;
+				font-size: .5rem;
+			}
+			
+			.cancel-service-main .reason {
+				width: 100%;
+				height: 3.66rem;
+				border-bottom: 1px solid #DADADA;
+				text-align: center;
+				
+			}
+			
+			.cancel-service-main .reason h4 {
+				padding-top: 1rem;
+				font-size: .66rem;
+				font-weight: normal;
+			
+			}
+			
+			.cancel-service-main .reason p {
+				font-size: .46rem;
+				color: #07CA61;
+				padding-top: .34rem;
+			}
+			
+			.cancel-main-bottom {
+				
+			}
+			
+			.cancel-main-bottom div{
+				width: 100%;
+				height: 1.94rem;
+				border-bottom: 1px solid #DADADA;
+				font-size: .6rem;
+				line-height: 1.94rem;
+			}
+			
+			.cancel-main-bottom div .yuan {
+				display: inline-block;
+				width: .8rem;
+				height: .8rem;
+				border-radius: 50%;
+				background: #07CA61;
+				position: relative;
+				float: right;
+				margin-top: .6rem;
+			}
+			
+			.cancel-main-bottom div .yuan img {
+				position: absolute;
+				text-align: center;
+				vertical-align: middle;
+				top: .2rem;
+				left: .2rem;		
+			}
+			
+			.cancel-main-bottom div .banyuan {
+				width: .8rem;
+				height: .8rem;
+				border: 1px solid #969696;
+				border-radius: 50%;
+				float: right;
+				margin-top: .6rem;
+			}
+			
+			.cancel-service-main button {
+				border: 0;
+				width: 100%;
+				height: 1.9rem;
+				font-size: .56rem;
+				color: #FFFFFF;
+				background: #07CA61;
+				border-radius: .1rem;
+				margin-top: 1.64rem;
+			}
+		</style>
+	</head>
+	<body>
+		<!--头部区域-->
+		<header class="cancel-service-header">
+			<a href=""><img src="img/returnKey.png"/></a>
+			<span>取消订单</span>
+		</header>
+		
+		<!--主体区域-->
+		<main class="cancel-service-main">
+			<div class="prompt">
+				<p>
+					若订单取消订单到达3次，账户会被冻结1天，景胜取消！您当日已取消2次
+				</p>
+			</div>
+			
+			<div class="reason">
+				<h4>请您告诉我们取消原因</h4>
+				<p>我们将努力提供更好的服务</p>	
+			</div>
+			<div class="padd">
+				
+				
+				<div class="cancel-main-bottom">
+					<div class="driver-much">
+					<span>司机离我太远</span>
+					<span class="yuan"><img src="img/dui.png"/></span>
+				</div>
+				<div class="wrong-order">
+					<span>下错单重复下单</span>
+					<span class="banyuan"></span>
+				</div>
+				<div class="no-vehicle">
+					<span>暂时不需要车</span>
+					<span class="banyuan"></span>
+				</div>
+				<div class="cancel">
+					<span>司机让我取消订单</span>
+					<span class="banyuan"></span>
+				</div>
+				</div>
+				
+				<button>提交</button>
+			</div>
+			
+		</main>
+	</body>
+</html>
